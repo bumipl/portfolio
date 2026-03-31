@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bartłomiej Szala · Linux System Engineer</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- Animated background -->
+  <canvas id="matrix-bg"></canvas>
+
+  <!-- Navigation -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <div class="nav-logo">
+        <span class="prompt">root@szala</span><span class="sep">:</span><span class="path">~</span><span class="cursor-nav">$</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#about">about</a></li>
+        <li><a href="#skills">skills</a></li>
+        <li><a href="#experience">experience</a></li>
+        <li><a href="#education">education</a></li>
+        <li><a href="#contact">contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section id="hero">
+    <div class="hero-content">
+      <div class="terminal-window">
+        <div class="terminal-bar">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+          <span class="terminal-title">bash — szala@workstation</span>
+        </div>
+        <div class="terminal-body">
+          <p class="terminal-line"><span class="t-prompt">szala@workstation:~$</span> <span class="t-cmd">cat profile.txt</span></p>
+          <div class="terminal-output" id="typewriter-output"></div>
+          <p class="terminal-line blink-line" id="blink-prompt"><span class="t-prompt">szala@workstation:~$</span> <span class="t-cursor">█</span></p>
+        </div>
+      </div>
+      <div class="hero-text">
+        <p class="hero-greeting">Hello, World. I'm</p>
+        <h1 class="hero-name">Bartłomiej<br /><span class="accent">Szala</span></h1>
+        <h2 class="hero-role">
+          <span class="role-icon"><i class="fa-brands fa-linux"></i></span>
+          Linux System Engineer
+        </h2>
+        <p class="hero-sub">Automating infrastructure. Containerizing workloads. Building reliability at scale.</p>
+        <div class="hero-badges">
+          <span class="badge"><i class="fa-brands fa-redhat"></i> RHCSA Certified</span>
+          <span class="badge"><i class="fa-solid fa-server"></i> 3+ Years Exp</span>
+          <span class="badge"><i class="fa-brands fa-docker"></i> DevOps</span>
+        </div>
+        <div class="hero-cta">
+          <a href="#contact" class="btn btn-primary">Get In Touch</a>
+          <a href="#experience" class="btn btn-ghost">View Experience</a>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <span>scroll</span>
+      <i class="fa-solid fa-chevron-down bounce"></i>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <div class="container">
+      <h2 class="section-title"><span class="hash">#</span> about_me</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>I am an ambitious <strong>Linux System Engineer</strong> constantly looking for opportunities for personal and professional development. Committed and dedicated, I approach my work with unwavering passion and strive for excellence in every task.</p>
+          <p>With experience spanning <strong>Capgemini</strong>, <strong>Accenture</strong>, and <strong>Software Mind</strong>, I've built and maintained large-scale enterprise Linux infrastructures — automating everything, containerizing workloads, and keeping systems running 24/7.</p>
+          <p>My stack spans the full DevOps toolchain: from <strong>Ansible & Puppet</strong> for configuration management, through <strong>Docker & Kubernetes</strong> for containerization, to <strong>OpenSearch & Icinga</strong> for observability.</p>
+        </div>
+        <div class="about-stats">
+          <div class="stat-card">
+            <div class="stat-num">3+</div>
+            <div class="stat-label">Years of Experience</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num">3</div>
+            <div class="stat-label">Enterprise Clients</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num">1</div>
+            <div class="stat-label">Red Hat Certification</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num">20+</div>
+            <div class="stat-label">Tools & Technologies</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <div class="container">
+      <h2 class="section-title"><span class="hash">#</span> skills</h2>
+      <div class="skills-grid">
+
+        <div class="skill-category">
+          <h3><i class="fa-brands fa-linux"></i> Operating Systems</h3>
+          <div class="skill-tags">
+            <span class="tag tag-core">Linux (RHEL/CentOS/Debian)</span>
+            <span class="tag tag-core">Bash</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3><i class="fa-solid fa-gears"></i> Automation & Config Mgmt</h3>
+          <div class="skill-tags">
+            <span class="tag tag-auto">Ansible</span>
+            <span class="tag tag-auto">Puppet</span>
+            <span class="tag tag-auto">AWX</span>
+            <span class="tag tag-auto">RedHat Automation Platform</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3><i class="fa-brands fa-docker"></i> Containers & Orchestration</h3>
+          <div class="skill-tags">
+            <span class="tag tag-container">Docker</span>
+            <span class="tag tag-container">Kubernetes</span>
+            <span class="tag tag-container">Harbor</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3><i class="fa-solid fa-chart-line"></i> Monitoring & Observability</h3>
+          <div class="skill-tags">
+            <span class="tag tag-monitor">OpenSearch</span>
+            <span class="tag tag-monitor">Icinga</span>
+            <span class="tag tag-monitor">Thruk</span>
+            <span class="tag tag-monitor">Check_mk</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3><i class="fa-solid fa-cloud"></i> Virtualization & Cloud</h3>
+          <div class="skill-tags">
+            <span class="tag tag-cloud">VMware vSphere</span>
+            <span class="tag tag-cloud">Cisco UCS Manager</span>
+            <span class="tag tag-cloud">OLVM</span>
+            <span class="tag tag-cloud">Azure DevOps</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3><i class="fa-solid fa-satellite-dish"></i> Patch & Lifecycle Mgmt</h3>
+          <div class="skill-tags">
+            <span class="tag tag-patch">Red Hat Satellite</span>
+            <span class="tag tag-patch">Oracle Spacewalk</span>
+            <span class="tag tag-patch">Uyuni</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3><i class="fa-solid fa-code-branch"></i> Dev & Collaboration</h3>
+          <div class="skill-tags">
+            <span class="tag tag-dev">Git</span>
+            <span class="tag tag-dev">GitLab CI/CD</span>
+            <span class="tag tag-dev">Jira</span>
+            <span class="tag tag-dev">ServiceNow</span>
+            <span class="tag tag-dev">Confluence</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3><i class="fa-solid fa-database"></i> Services & Integrations</h3>
+          <div class="skill-tags">
+            <span class="tag tag-svc">CouchDB</span>
+            <span class="tag tag-svc">MessageBird</span>
+            <span class="tag tag-svc">Lemur</span>
+            <span class="tag tag-svc">Autosys</span>
+            <span class="tag tag-svc">Control-M</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience">
+    <div class="container">
+      <h2 class="section-title"><span class="hash">#</span> experience</h2>
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="tc-header">
+              <div>
+                <h3>Linux System Engineer</h3>
+                <span class="company"><i class="fa-solid fa-building"></i> Software Mind</span>
+              </div>
+              <span class="period"><i class="fa-regular fa-calendar"></i> 08.2024 – Present</span>
+            </div>
+            <p class="tc-desc">Part of a project transition team responsible for modernizing and maintaining a large-scale Linux-based infrastructure for an enterprise client. Focused on identifying legacy components and designing optimized, scalable, secure solutions.</p>
+            <ul class="tc-list">
+              <li>Automated infrastructure provisioning using <strong>AWX, Puppet</strong> and <strong>GitLab CI/CD</strong></li>
+              <li>Managed and containerized applications with <strong>Docker</strong> and <strong>Kubernetes</strong></li>
+              <li>Oversaw lifecycle management via <strong>Spacewalk, Red Hat Satellite</strong> and <strong>Uyuni</strong></li>
+              <li>Monitored infrastructure health with <strong>Icinga, Thruk, OpenSearch</strong> and ServiceNow workflows</li>
+              <li>Integrated services: <strong>VMware, Harbor, MessageBird, CouchDB, Lemur</strong></li>
+              <li>Provided on-call support and resolved incidents to ensure service continuity</li>
+            </ul>
+            <div class="tc-tags">
+              <span>AWX</span><span>Puppet</span><span>Docker</span><span>Kubernetes</span><span>OpenSearch</span><span>GitLab CI/CD</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="tc-header">
+              <div>
+                <h3>Linux System Engineer</h3>
+                <span class="company"><i class="fa-solid fa-building"></i> Accenture · Katowice</span>
+              </div>
+              <span class="period"><i class="fa-regular fa-calendar"></i> 03.2023 – 07.2024</span>
+            </div>
+            <p class="tc-desc">Maintained and optimized enterprise Linux environments, focusing on system reliability, security, and performance. Managed patching, vulnerability remediation, VM deployment, software upgrades, and incident resolution.</p>
+            <ul class="tc-list">
+              <li>Automated processes using <strong>Bash, Ansible</strong> and <strong>RedHat Automation Platform</strong></li>
+              <li>Managed VMs with <strong>OLVM</strong> and <strong>vSphere</strong></li>
+              <li>Handled patching and vulnerability remediation across large server fleets</li>
+              <li>Collaborated with app ops, dev teams and vendors for seamless integration</li>
+              <li>Provided on-call support in high-pressure enterprise environments</li>
+            </ul>
+            <div class="tc-tags">
+              <span>Ansible</span><span>Bash</span><span>Azure DevOps</span><span>OLVM</span><span>vSphere</span><span>Check_mk</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="tc-header">
+              <div>
+                <h3>Junior Infrastructure Analyst Linux/Batch</h3>
+                <span class="company"><i class="fa-solid fa-building"></i> Capgemini · Katowice</span>
+              </div>
+              <span class="period"><i class="fa-regular fa-calendar"></i> 02.2022 – 02.2023</span>
+            </div>
+            <p class="tc-desc">Provided 24/7 support and monitoring of Red Hat Linux infrastructure, handling incidents and alerts to ensure system reliability.</p>
+            <ul class="tc-list">
+              <li>Executed health checks and generated reports on infrastructure status</li>
+              <li>Performed server configuration, troubleshooting and issue resolution</li>
+              <li>Managed <strong>Autosys/Control-M</strong> batch jobs — creation, modification and execution</li>
+              <li>Ensured 24/7 on-call coverage for critical infrastructure</li>
+            </ul>
+            <div class="tc-tags">
+              <span>Linux</span><span>Bash</span><span>Autosys</span><span>Control-M</span><span>RHEL</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Education & Certifications -->
+  <section id="education">
+    <div class="container">
+      <h2 class="section-title"><span class="hash">#</span> education_&amp;_certs</h2>
+      <div class="edu-grid">
+
+        <div class="edu-card">
+          <div class="edu-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+          <div class="edu-info">
+            <h3>Computer Science</h3>
+            <p class="edu-school">Wyższa Szkoła Bankowa w Poznaniu</p>
+            <p class="edu-period"><i class="fa-regular fa-calendar"></i> 10.2022 – 02.2026</p>
+          </div>
+        </div>
+
+        <div class="edu-card cert-card">
+          <div class="edu-icon"><i class="fa-brands fa-redhat"></i></div>
+          <div class="edu-info">
+            <h3>Red Hat Certified System Administrator</h3>
+            <p class="edu-school">RHCSA · Red Hat, Inc.</p>
+            <p class="cert-id">ID: 230-266-629</p>
+            <a href="https://www.redhat.com/en/services/certification/rhcsa" target="_blank" class="cert-link">
+              Verify Certificate <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="lang-section">
+        <h3><i class="fa-solid fa-language"></i> Languages</h3>
+        <div class="lang-card">
+          <span class="lang-flag">🇬🇧</span>
+          <div class="lang-info">
+            <span class="lang-name">English</span>
+            <span class="lang-level">Advanced</span>
+          </div>
+          <div class="lang-bar">
+            <div class="lang-fill" style="width: 85%"></div>
+          </div>
+        </div>
+        <div class="lang-card">
+          <span class="lang-flag">🇵🇱</span>
+          <div class="lang-info">
+            <span class="lang-name">Polish</span>
+            <span class="lang-level">Native</span>
+          </div>
+          <div class="lang-bar">
+            <div class="lang-fill" style="width: 100%"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title"><span class="hash">#</span> contact</h2>
+      <div class="contact-wrapper">
+        <div class="contact-text">
+          <h3>Let's work together</h3>
+          <p>Looking for a Linux engineer who knows how to build, automate, and scale? Let's connect.</p>
+        </div>
+        <div class="contact-links">
+          <a href="mailto:bartlomiej.szala02@gmail.com" class="contact-card">
+            <i class="fa-solid fa-envelope"></i>
+            <div>
+              <span class="cc-label">Email</span>
+              <span class="cc-value">bartlomiej.szala02@gmail.com</span>
+            </div>
+          </a>
+          <a href="https://www.linkedin.com/in/bart%C5%82omiej-szala-b80428210/" target="_blank" class="contact-card">
+            <i class="fa-brands fa-linkedin"></i>
+            <div>
+              <span class="cc-label">LinkedIn</span>
+              <span class="cc-value">Bartłomiej Szala</span>
+            </div>
+          </a>
+          <div class="contact-card no-link">
+            <i class="fa-solid fa-location-dot"></i>
+            <div>
+              <span class="cc-label">Location</span>
+              <span class="cc-value">Poland</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-prompt">bartlomiejszala.pl</span>
+      <span class="footer-copy">Built with <i class="fa-solid fa-heart"></i> · 2026</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
