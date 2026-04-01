@@ -362,6 +362,10 @@ section:nth-child(even) { background: rgba(22,27,34,.5); }
   padding: 1.5rem;
   text-align: center;
   transition: border-color .3s, box-shadow .3s;
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
 }
 .stat-card:hover {
   border-color: var(--green);
