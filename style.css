@@ -101,6 +101,34 @@ body {
 .nav-links a:hover::before,
 .nav-links a.active::before { opacity: 1; }
 
+/* Language Switcher */
+.lang-switcher {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-left: 2rem;
+}
+.lang-btn {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color .3s;
+  padding: 0.25rem 0.5rem;
+}
+.lang-btn:hover {
+  color: var(--text);
+}
+.lang-btn.active {
+  color: var(--green);
+}
+.lang-sep {
+  color: var(--border);
+}
+
 .hamburger {
   display: none;
   flex-direction: column;
@@ -733,4 +761,20 @@ footer {
 .reveal.visible {
   opacity: 1;
   transform: none;
+}
+
+/* ══════════════════════════════════════
+   MOBILE RESPONSIVE
+══════════════════════════════════════ */
+@media (max-width: 768px) {
+  .lang-switcher {
+    margin-left: auto;
+    margin-right: 1rem;
+    order: -1;
+  }
+  
+  .lang-btn {
+    font-size: 0.75rem;
+    padding: 0.2rem 0.3rem;
+  }
 }
