@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main  # uruchamia się tylko po merge do main
+      - main  # runs only after merge to main
 
 permissions:
   contents: read
@@ -31,7 +31,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: '.'  # cały folder = index.html, style.css, script.js
+          path: '.'  # entire folder = index.html, style.css, script.js
 
       - name: Deploy to GitHub Pages
         id: deployment
